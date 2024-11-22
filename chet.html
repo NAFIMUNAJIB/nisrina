@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diskusi Hibah Barang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      body {
+        padding-top: 56px; /* Ruang untuk navbar */
+      }
+      .chat-box {
+        height: 400px; /* Tinggi chat box */
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+      .chat-message {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+      }
+      .chat-message.sent {
+        align-items: flex-end;
+      }
+      .profile {
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-size: 0.9em;
+        display: flex;
+        align-items: center;
+      }
+      .message-content {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        display: inline-block;
+        font-size: 0.9em;
+        max-width: 80%;
+        position: relative;
+      }
+      .status-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      .online {
+        background-color: green;
+      }
+      .offline {
+        background-color: red;
+      }
+      .message-actions {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+      .action-btn {
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        font-size: 0.8em;
+        color: #007bff;
+      }
+      .dropdown-menu {
+        min-width: 120px;
+      }
+      .container {
+        max-width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">Kelompok 2</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Barang">Barang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Testimoni">Testimoni</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Layanan">Layanan</a>
+            </li>
+            <!-- Tambahkan halaman Chat -->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Utama</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+    <!-- Konten Chat -->
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>Diskusi Hibah Barang</span>
+              </div>
+            </div>
+            <div class="card-body chat-box" id="chatBox">
+              <!-- Pesan chat akan ditampilkan di sini -->
+            </div>
+            <div class="card-footer">
+              <!-- Profil Pengguna -->
+              <div class="mb-2">
+                <label for="profileInput" class="form-label">Profil Anda:</label>
+                <input type="text" id="profileInput" class="form-control form-control-sm" placeholder="Nama Anda" value="Pengguna 1" />
+              </div>
+
+              <!-- Form chat -->
+              <div class="input-group">
+                <input type="text" id="chatInput" class="form-control form-control-sm" placeholder="Ketik pesan..." />
+                <button id="sendBtn" class="btn btn-primary btn-sm">Kirim</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Event listener untuk mengirim pesan
+      document.getElementById("sendBtn").addEventListener("click", function () {
+        const chatInput = document.getElementById("chatInput");
+        const profileInput = document.getElementById("profileInput");
+        const chatBox = document.getElementById("chatBox");
+        const message = chatInput.value;
+        const profileName = profileInput.value;
+
+        if (message.trim() !== "") {
+          // Tentukan status pengguna
+          const userStatus = Math.random() > 0.5 ? "online" : "offline"; // Simulasi status
+
+          // Buat elemen pesan
+          const messageDiv = document.createElement("div");
+          messageDiv.classList.add("chat-message");
+          messageDiv.classList.add("sent");
+
+          // Tambahkan nama profil dan pesan
+          messageDiv.innerHTML = `
+                    <div class="profile">
+                      <span class="status-dot ${userStatus}"></span>
+                      ${profileName}
+                    </div>
+                    <div class="message-content">
+                      ${message}
+                    </div>
+                `;
+
+          // Masukkan pesan ke dalam chat box
+          chatBox.appendChild(messageDiv);
+
+          // Scroll ke pesan terakhir
+          chatBox.scrollTop = chatBox.scrollHeight;
+
+          // Kosongkan input pesan
+          chatInput.value = "";
+        }
+      });
+    </script>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

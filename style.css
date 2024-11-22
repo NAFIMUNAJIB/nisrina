@@ -1,0 +1,20 @@
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #e2edff;
+}
+
+#Barang {
+  background-color: #e2edff;
+}
+
+section {
+  padding-top: 5rem;
+}
+
+.testimoni-img {
+  width: 100%;
+}
+
+#testimoni .row > * {
+  padding: 0;
+}

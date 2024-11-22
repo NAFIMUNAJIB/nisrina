@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Link icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- !! -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+
+    <title>Web Hibah Barang</title>
+  </head>
+  <body id="Home">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Kelompok 2</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Barang">Barang</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Testimoni">Testimoni</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Layanan">Layanan</a>
+            </li>
+            <!-- Tambahkan halaman Chat -->
+            <li class="nav-item">
+              <a class="nav-link" href="chet.html">Chat</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+
+    <!-- Jumbotron -->
+    <section class="jumbotron text-center">
+      <img src="img/logo ayam.jpg" alt="Nafi Munajib" width="200" class="rounded-circle img-thumbnail" />
+      <h1 class="display-4">Kelompok 2</h1>
+      <p class="lead"></p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffff"
+          fill-opacity="1"
+          d="M0,64L48,101.3C96,139,192,213,288,208C384,203,480,117,576,117.3C672,117,768,203,864,245.3C960,288,1056,288,1152,256C1248,224,1344,160,1392,128L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Akhir Jumbotron -->
+
+    <!-- About -->
+    <section id="About">
+      <div class="container" data-aos="fade-down">
+        <div class="row text-center mb-4">
+          <div class="col">
+            <h2>About</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center fs-5 text-center">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
+            <p>Tentang Kami Web Hibah Barang ini lahir dari keprihatinan kami melihat banyak barang masih layak pakai terbuang sia-sia. Kami percaya setiap barang memiliki potensi untuk memberi manfaat bagi orang lain.</p>
+          </div>
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+            <p>Apa yang Kami Lakukan: Kami menyediakan wadah yang mudah dan aman bagi siswa untuk memberikan barang-barang yang masih layak pakai kepada mereka yang membutuhkan.</p>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#e2edff"
+          fill-opacity="1"
+          d="M0,64L48,101.3C96,139,192,213,288,208C384,203,480,117,576,117.3C672,117,768,203,864,245.3C960,288,1056,288,1152,256C1248,224,1344,160,1392,128L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Akhir About -->
+
+    <!-- Barang -->
+<section id="Barang"></section>
+<div class="container">
+  <div class="row text-center mb-4" data-aos="fade-down">
+    <div class="col">
+      <h2>Stok Barang</h2>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <!-- Tombol Tambah Barang -->
+      <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#uploadModal">Tambah Barang</button>
+
+      <!-- Tabel Stok Barang -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Nama Barang</th>
+            <th scope="col">Deskripsi</th>
+            <th scope="col">Stock</th>
+          </tr>
+        </thead>
+        <tbody id="barangTable">
+          <!-- Data barang akan ditampilkan di sini -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Tambah Barang -->
+<div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="uploadModalLabel">Tambah Barang</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Form Input NIS -->
+        <div class="mb-3">
+          <label for="nisSiswa" class="form-label">NIS Siswa</label>
+          <input type="text" class="form-control" id="nisSiswa" placeholder="NIS Siswa" />
+        </div>
+        <div class="mb-3">
+          <label for="namaBarang" class="form-label">Nama Barang</label>
+          <input type="text" class="form-control" id="namaBarang" placeholder="Nama Barang" />
+        </div>
+        <div class="mb-3">
+          <label for="jumlahBarang" class="form-label">Jumlah</label>
+          <input type="number" class="form-control" id="jumlahBarang" placeholder="Jumlah" />
+        </div>
+        <div class="mb-3">
+          <label for="kategoriBarang" class="form-label">Kategori</label>
+          <select class="form-control" id="kategoriBarang">
+            <option value="masuk">Barang Masuk</option>
+            <option value="keluar">Barang Keluar</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="imageUpload" class="form-label">Gambar Barang</label>
+          <input type="file" class="form-control" id="imageUpload" accept="image/*" />
+        </div>
+        <textarea class="form-control mt-2" id="messageInput" placeholder="Deskripsi Barang"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button type="button" class="btn btn-primary" id="uploadButton">Upload</button>
+      </div>
+    </div>
+  </div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#ffffff" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,170.7C384,171,480,181,576,192C672,203,768,213,864,213.3C960,213,1056,203,1152,192C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+</svg>
+</section>
+
+<script>
+document.getElementById("uploadButton").addEventListener("click", function () {
+  const nisSiswa = document.getElementById("nisSiswa").value;  // Ambil nilai NIS
+  const namaBarang = document.getElementById("namaBarang").value;
+  const jumlahBarang = document.getElementById("jumlahBarang").value;
+  const kategoriBarang = document.getElementById("kategoriBarang").value;
+  const messageInput = document.getElementById("messageInput").value;
+  const imageUpload = document.getElementById("imageUpload").files[0];
+
+  if (!nisSiswa || !namaBarang || !jumlahBarang || !kategoriBarang || !messageInput || !imageUpload) {
+    alert("Semua kolom harus diisi!");
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append("nisSiswa", nisSiswa);  // Tambahkan NIS ke form data
+  formData.append("namaBarang", namaBarang);
+  formData.append("jumlahBarang", jumlahBarang);
+  formData.append("kategoriBarang", kategoriBarang);
+  formData.append("messageInput", messageInput);
+  formData.append("imageUpload", imageUpload);
+
+  fetch("upload_barang.php", {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => response.text())
+    .then((data) => {
+      if (data === "success") {
+        const table = document.getElementById("barangTable");
+        const rowCount = table.rows.length;
+        const row = table.insertRow(rowCount);
+
+        row.insertCell(0).innerHTML = rowCount + 1;
+        row.insertCell(1).innerHTML = namaBarang;
+        row.insertCell(2).innerHTML = messageInput;
+        row.insertCell(3).innerHTML = jumlahBarang;
+
+        const uploadModal = document.getElementById("uploadModal");
+        const modal = bootstrap.Modal.getInstance(uploadModal);
+        modal.hide();
+      } else {
+        alert("Gagal mengupload barang.");
+      }
+    })
+    .catch((error) => console.error("Error:", error));
+});
+</script>
+
+
+    <!-- Testimoni -->
+    <section id="Testimoni" class="my-5">
+      <div class="container">
+        <div class="row text-center mb-4" data-aos="fade-down">
+          <div class="col">
+            <h2>Testimoni</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form action="upload_testimoni.php" method="POST" enctype="multipart/form-data">
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama" name="nama" required />
+              </div>
+              <div class="mb-3">
+                <label for="gambar" class="form-label">Gambar</label>
+                <input type="file" class="form-control" id="gambar" name="gambar" required />
+              </div>
+              <div class="mb-3">
+                <label for="testimoni" class="form-label">Testimoni</label>
+                <textarea class="form-control" id="testimoni" name="testimoni" rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Unggah Testimoni</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Akhir Testimoni -->
+
+    <!-- Layanan -->
+    <section id="Layanan">
+      <div class="container">
+        <div class="row text-center" data-aos="fade-down">
+          <div class="col">
+            <h2>Contact Me</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form id="contactForm" name="NM-Contact-Form">
+              <div class="mb-3">
+                <label for="name" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" name="nama" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required />
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" rows="3" name="pesan" required></textarea>
+              </div>
+              <div class="loading-btn">
+                <button id="submitButton" type="submit" class="btn btn-primary">
+                  Kirim
+                  <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#0d6efd"
+          fill-opacity="1"
+          d="M0,32L48,53.3C96,75,192,117,288,133.3C384,149,480,139,576,112C672,85,768,43,864,58.7C960,75,1056,149,1152,149.3C1248,149,1344,75,1392,37.3L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Mencegah pengiriman form default
+    
+        // Validasi input
+        const nama = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const pesan = document.getElementById("pesan").value.trim();
+    
+        if (!nama || !email || !pesan) {
+          alert("Harap lengkapi semua kolom sebelum mengirim.");
+          return;
+        }
+    
+        // Tampilkan pop-up pesan terkirim
+        alert("Pesan Anda sudah terkirim!");
+      });
+    </script>    
+    <!-- Akhir Contack -->
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center pb-3">
+      <p>By Created widh <i class="bi bi-suit-heart-fill text-danger"></i> by <a href="https://instagram.com/n4fi.m?igshid=OGY3MTU3OGY1Mw==" class="text-white font fw-bold">F&Q</a></p>
+    </footer>
+    <!-- Akhir Footer -->
+
+    <!-- Link Logo Bootstarp5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- AOS Animate on scroll Libarary -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const galleryImage = document.querySelectorAll(".gallery-img");
+
+      galleryImage.forEach((img, i) => {
+        img.dataset.aos = "fade-down";
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      });
+
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <!-- Akhir AOS Animate on scroll Libarary -->
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "SMKN10 SEMARANG | Web Hibah Barang Beta" });
+      gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
+    <!-- Akhir GSAP -->
+
+    <!-- Contack Form Gogle side -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const scriptURL = "https://script.google.com/macros/s/AKfycbzfcJXn_q4p5yPv-tsMifBv-MzttbUZZO0sHGl-96zg_-hBYdtuEUp6qsZpgP38f3K9BQ/exec";
+        const form = document.forms["NM-Contact-Form"];
+    
+        if (form) {
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(scriptURL, { method: "POST", body: new FormData(form) })
+              .then((response) => {
+                if (response.ok) {
+                  console.log("Success!");
+                } else {
+                  console.error("Error! Status Code: " + response.status);
+                }
+              })
+              .catch((error) => console.error("Network Error:", error.message));
+          });
+        } else {
+          console.error("Form tidak ditemukan di dalam DOM.");
+        }
+      });
+    </script>
+    
+
+    <!-- !! -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Akhir Contack Form Gogle sidde -->
+  </body>
+</html>
